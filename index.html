@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Master Pro - SkillCraft Task 3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <div class="quiz-header">
+    <div class="header-top">
+      <h1>🧠 Quiz Master Pro</h1>
+      <button class="theme-btn" id="themeBtn">🌙</button>
+    </div>
+
+    <div class="progress-dots" id="progressDots"></div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <span class="stat-label">Question</span>
+        <span class="stat-value" id="qNumber">1/10</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Score</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Time</span>
+        <span class="stat-value" id="timer">00:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-body" id="quizBody">
+    <div class="question-section">
+      <div class="question-type" id="qType">Multiple Choice</div>
+      <h2 class="question-text" id="questionText">Loading...</h2>
+    </div>
+
+    <div id="optionsContainer" class="options"></div>
+    <input type="text" id="textInput" class="text-input" placeholder="Type your answer..." style="display:none;">
+
+    <div class="buttons">
+      <button id="skipBtn" class="btn btn-skip">Skip</button>
+      <button id="submitBtn" class="btn btn-submit">Submit</button>
+      <button id="nextBtn" class="btn btn-next" style="display:none;">Next →</button>
+    </div>
+  </div>
+
+  <div id="resultScreen" class="result-screen" style="display:none;">
+    <div class="result-icon">🏆</div>
+    <h2>Quiz Completed!</h2>
+    <div class="final-score" id="finalScore">8/10</div>
+    <p id="resultFeedback">Great Job!</p>
+    <div class="result-stats">
+      <div><b id="correctCount">0</b><span>Correct</span></div>
+      <div><b id="wrongCount">0</b><span>Wrong</span></div>
+      <div><b id="timeTaken">00:00</b><span>Time</span></div>
+    </div>
+    <button id="restartBtn" class="btn btn-restart">Play Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
